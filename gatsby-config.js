@@ -6,7 +6,12 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Forest Had Star`,
+    siteHeadline: `RIM`,
+    siteTitle: `RIM`,
+    siteTitleAlt: `RIM's Blog`,
+    author: `RimChoi`,
+    siteLanguage: `KR`,
+    siteImage: `/banner.png`,
   },
   plugins: [
     {
@@ -25,12 +30,12 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: ``,
+            name: `GitHub`,
+            url: `https://www.instagram.com/rimChoi`,
           },
           {
             name: `Instagram`,
-            url: `https://www.instagram.com//`,
+            url: `https://www.instagram.com/maseong_rim`,
           },
         ],
       },
