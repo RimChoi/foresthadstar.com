@@ -6,19 +6,34 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
+    // Used for the title template on pages other than the index site
     siteHeadline: `RIM`,
     siteTitle: `RIM`,
-    siteTitleAlt: `RIM's Blog`,
+     // Default title of the page
+    siteTitleAlt: `林 :: 수오재(守吾齋)`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://foresthadstar.com`,
+    // Used for SEO
+    //siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
     author: `RimChoi`,
     siteLanguage: `KR`,
-    siteImage: `/banner.png`,
+    siteImage: `/banner.jpg`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content/pages`,
+        path: `content/pages`,
+      },
+    },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        formatString: `YYYY.MM.DD`,
         navigation: [
+        
           {
             title: `Blog`,
             slug: `/blog`,
@@ -31,7 +46,7 @@ module.exports = {
         externalLinks: [
           {
             name: `GitHub`,
-            url: `https://www.instagram.com/rimChoi`,
+            url: `https://www.github.com/rimChoi`,
           },
           {
             name: `Instagram`,
@@ -43,7 +58,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        // trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     `gatsby-plugin-sitemap`,
