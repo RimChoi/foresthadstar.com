@@ -14,7 +14,7 @@ module.exports = {
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://foresthadstar.com`,
     // Used for SEO
-    //siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteDescription: `개인적인 이야기. 일상에서 만나는 디버깅과 트러블슈팅. 공부하는 기록을 남깁니다`,
     author: `RimChoi`,
     siteLanguage: `KR`,
     siteImage: `/banner.jpg`,
@@ -67,12 +67,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Archive for scribbling`,
+        short_name: `rim-blog`,
+        description: `blog, portfolio, notepad`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `#E0523C`,
         display: `standalone`,
         icons: [
           {
